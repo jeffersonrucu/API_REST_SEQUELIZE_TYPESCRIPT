@@ -1,6 +1,6 @@
-### API Rest Sequelize Typescript
+# API Rest Sequelize Typescript
 
-Esta API irá simular o back-end de uma aplicação de vagas de emprego. Nela, candidatos vão poder se cadastrar e então se candidatar a vagas. Enquanto isso, empresas também podem se cadastrar e criar vagas de emprego para que os candidatos se candidatem.
+_Esta API irá simular o back-end de uma aplicação de vagas de emprego. Nela, candidatos vão poder se cadastrar e então se candidatar a vagas. Enquanto isso, empresas também podem se cadastrar e criar vagas de emprego para que os candidatos se candidatem._
 
 ## Etapas do Projeto
 
