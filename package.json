@@ -1,0 +1,32 @@
+{
+  "name": "api_rest_sequelize_typescript",
+  "version": "1.0.0",
+  "description": "Esta API irá simular o back-end de uma aplicação de vagas de emprego. Nela, candidatos vão poder se cadastrar e então se candidatar a vagas. Enquanto isso, empresas também podem se cadastrar e criar vagas de emprego para que os candidatos se candidatem.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonrucu/API_REST_SEQUELIZE_TYPESCRIPT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffersonrucu/API_REST_SEQUELIZE_TYPESCRIPT/issues"
+  },
+  "homepage": "https://github.com/jeffersonrucu/API_REST_SEQUELIZE_TYPESCRIPT#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "sequelize-cli": "^6.4.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.21.3"
+  }
+}
