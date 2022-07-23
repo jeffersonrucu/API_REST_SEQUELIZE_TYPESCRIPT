@@ -4,6 +4,11 @@ import { Candidate } from '../models/candidate';
 export const candidatesController = {
     index: async (req: Request, res: Response) => {
         const candidates = await Candidate.findAll()
+
+        if (candidates === null){
+            return res.status(404).json({ message: 'Nenhum candidato encontrado' });
+        }
+
         return res.json(candidates)
     },
 
