@@ -1,0 +1,163 @@
+{
+    "openapi": "3.0.0",
+
+    "info": {
+        "version": "1.0.0",
+        "title": "API Rest Sequelize Typescript",
+        "description": "Esta API irá simular o back-end de uma aplicação de vagas de emprego. Nela, candidatos vão poder se cadastrar e então se candidatar a vagas. Enquanto isso, empresas também podem se cadastrar e criar vagas de emprego para que os candidatos se candidatem.",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+
+    "servers": [
+        {
+            "url": "/"
+        }
+    ],
+
+    "tags": [
+        {
+            "name": "Consumidor",
+            "description": "Endpoints referentes ao consumidor"
+        },
+        {
+            "name": "Empresas",
+            "description": "Endpoints referentes a empresas"
+        }
+    ],
+
+    "consumes": [
+        "application/json"
+    ],
+
+    "produces": [
+        "application/json"
+    ],
+
+    "paths": {
+        "/candidates": {
+            "get": {
+                "tags": [
+                    "Consumidor"
+                ],
+                "summary": "Retorna todos os candidatos",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Nenhum candidato encontrado"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Consumidor"
+                ],
+                "summary": "Cadastra um candidato",
+                "requestBody": {
+                    "description": "Cat Object",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/Candidates"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Erro"
+                    }
+                }
+            }
+        },
+        "/candidates/{id}": {
+            "get": {
+                "tags": [
+                    "Consumidor"
+                ],
+                "summary": "Retorna candidato expecifico",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Nenhum candidato encontrado"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Consumidor"
+                ],
+                "summary": "Atualizar dados de um candidato",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/Candidates"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Erro"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Consumidor"
+                ],
+                "summary": "Deleta um candidato expecifico",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Nenhum candidato encontrado"
+                    }
+                }
+            }
+        }
+    },
+
+    "definitions": {
+        "Candidates": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "bio": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "openToWork": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "ID": {
+            "properties": {
+                "id": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}
